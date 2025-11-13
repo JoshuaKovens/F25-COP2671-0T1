@@ -3,11 +3,12 @@ using System;
 
 public class TimeManager : MonoBehaviour
 {
-    
-    public float secondsPerGameDay = 900f; // 15 minutes per full day
+    [Header("Time Settings")]
+    public float secondsPerGameDay = 900f; // 15 min per full day
+    public float timeMultiplier = 1f;      // Adjust speed in Inspector
 
-     public int currentHour = 6;
-     public int currentMinute = 0;
+    public int currentHour = 6;
+    public int currentMinute = 0;
 
     public event Action<int, int> OnTimeChanged;
 
@@ -16,13 +17,12 @@ public class TimeManager : MonoBehaviour
 
     void Start()
     {
-        // Calculate how many real seconds per in-game minute
-        secondsPerMinute = secondsPerGameDay / (24f * 60f); // 24h * 60min
+        secondsPerMinute = secondsPerGameDay / (24f * 60f);
     }
 
     void Update()
     {
-        timer += Time.deltaTime;
+        timer += Time.deltaTime * timeMultiplier;
 
         if (timer >= secondsPerMinute)
         {
@@ -47,7 +47,6 @@ public class TimeManager : MonoBehaviour
         OnTimeChanged?.Invoke(currentHour, currentMinute);
     }
 
-    //  get formatted time
     public string GetTimeString()
     {
         return string.Format("{0:00}:{1:00}", currentHour, currentMinute);

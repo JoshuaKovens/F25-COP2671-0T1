@@ -15,8 +15,8 @@ public class CropBlock : MonoBehaviour
     public Sprite _wateredSoilIcon;
 
     [Header("Crop Sprites")]
-    public SpriteRenderer _cropGrowthSR; // shows growth
-    public SpriteRenderer _cropSR;       // highlight
+    public SpriteRenderer _cropGrowthSR; 
+    public SpriteRenderer _cropSR;       
 
     private int _currentStage;
     private SeedPacket _currentSeedPacket;
@@ -105,12 +105,23 @@ public class CropBlock : MonoBehaviour
         Debug.Log($"{_cropName} at {Location.x},{Location.y} advanced to stage {_currentStage}");
     }
 
+    
     public void HarvestPlants()
     {
         if (_currentState != CropState.ReadyToHarvest) return;
 
         if (_currentSeedPacket != null && _currentSeedPacket.harvestPrefab != null)
-            Instantiate(_currentSeedPacket.harvestPrefab, transform.position, Quaternion.identity);
+        {
+            GameObject obj = Instantiate(_currentSeedPacket.harvestPrefab, transform.position, Quaternion.identity);
+
+            // Assign harvested item data
+            HarvestItem harvestItem = obj.GetComponent<HarvestItem>();
+            if (harvestItem != null && _currentSeedPacket.harvestItemData != null)
+            {
+                harvestItem.itemData = _currentSeedPacket.harvestItemData;
+                harvestItem.quantity = harvestItem.itemData.startingQuantity;
+            }
+        }
 
         ResetSoil();
         _cropController.RemoveFromPlantedCrops(this);

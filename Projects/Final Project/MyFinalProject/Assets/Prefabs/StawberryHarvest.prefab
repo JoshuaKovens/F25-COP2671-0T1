@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5619439518954782863}
   - component: {fileID: 2460283349043698879}
+  - component: {fileID: -2857010790162428694}
   m_Layer: 0
   m_Name: StawberryHarvest
   m_TagString: Untagged
@@ -87,3 +88,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-2857010790162428694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5370708238550623252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 505806cf64701aa42b88616b0e2294d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemData: {fileID: 11400000, guid: 72c18033ce31e6f4eab6b7043ff724fc, type: 2}
+  quantity: 1

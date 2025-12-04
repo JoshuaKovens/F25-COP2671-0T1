@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1558727064607212969}
   - component: {fileID: 885675105744648328}
+  - component: {fileID: 87818171743183524}
   m_Layer: 0
   m_Name: SunflowerHarvest
   m_TagString: Untagged
@@ -87,3 +88,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &87818171743183524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7208689186088190786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 505806cf64701aa42b88616b0e2294d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemData: {fileID: 11400000, guid: 752c18aa7953c1349b6c19afc7688960, type: 2}
+  quantity: 1

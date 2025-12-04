@@ -12,6 +12,9 @@ public class SeedPacket : ScriptableObject
     [Header("Harvest Prefab")]
     public GameObject harvestPrefab;
 
+    [Header("Harvest Item")]
+    public ItemData harvestItemData; 
+
     public Sprite GetIconForStage(int stage)
     {
         if (growthSprites == null || growthSprites.Length == 0) return null;

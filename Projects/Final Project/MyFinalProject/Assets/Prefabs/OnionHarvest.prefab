@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7852738310603938593}
   - component: {fileID: 3692126514656951724}
+  - component: {fileID: 7611148301540281162}
   m_Layer: 0
   m_Name: OnionHarvest
   m_TagString: Untagged
@@ -87,3 +88,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7611148301540281162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5302705382138464841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 505806cf64701aa42b88616b0e2294d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemData: {fileID: 11400000, guid: 69c54f673d108ef499b7ff2bee1ede24, type: 2}
+  quantity: 1
